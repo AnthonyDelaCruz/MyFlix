@@ -1,29 +1,37 @@
 import React from "react";
-import {
-  Inner,
-  Container,
-  Title,
-  Subheader,
-  Pane,
-  Item,
-  Image,
-} from "./styles/jumbotron";
+import Jumbotron from "./Jumbotron";
 
-const Jumbotron = ({ children, ...props }) => (
-  <Container {...props}>{children}</Container>
+import jumboTronInfo from "static/fixtures/jumbotronInfo.json";
+
+const JumbotronContainer = () => (
+  <Jumbotron>
+    <Jumbotron.Content>
+      {jumboTronInfo.map(({ header, sub_header, img_path }, i) => (
+        <>
+          <Jumbotron.Item
+            key={i}
+            direction={i % 2 !== 0 ? "row-reverse" : "row"}
+          >
+            <Jumbotron.Pane
+              padding={i % 2 !== 0 ? "left" : "right"}
+              justifyContent={i % 2 !== 0 ? "flex-start" : "flex-end"}
+            >
+              <div>
+                <Jumbotron.Title>{header}</Jumbotron.Title>
+                <Jumbotron.Subheader>{sub_header}</Jumbotron.Subheader>
+              </div>
+            </Jumbotron.Pane>
+            <Jumbotron.Pane
+              justifyContent={i % 2 !== 0 ? "center" : "flex-start"}
+            >
+              <Jumbotron.Image src={img_path} alt={header} />
+            </Jumbotron.Pane>
+          </Jumbotron.Item>
+          <div className="divider" />
+        </>
+      ))}
+    </Jumbotron.Content>
+  </Jumbotron>
 );
 
-Jumbotron.Content = ({ children, ...props }) => (
-  <Inner {...props}>{children}</Inner>
-);
-Jumbotron.Title = ({ children, ...props }) => (
-  <Title {...props}>{children}</Title>
-);
-Jumbotron.Subheader = ({ children, ...props }) => (
-  <Subheader {...props}>{children}</Subheader>
-);
-Jumbotron.Item = ({ children, ...props }) => <Item {...props}>{children}</Item>;
-Jumbotron.Pane = ({ children, ...props }) => <Pane {...props}>{children}</Pane>;
-Jumbotron.Image = (props) => <Image {...props} />;
-
-export default Jumbotron;
+export default JumbotronContainer;

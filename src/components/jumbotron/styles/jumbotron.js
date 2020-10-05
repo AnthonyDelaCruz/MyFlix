@@ -35,7 +35,7 @@ export const Item = styled.div`
   flex-direction: ${({ direction }) => direction};
   align-items: center;
   padding: 70px 45px;
-  max-width: 1100px;
+  max-width: 1000px;
   margin: auto;
 
   @media (max-width: 1000px) {

@@ -7,6 +7,7 @@ const GlobalStyle = createGlobalStyle`
         font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
         background-color: #000;
         color: #fff;
+        letter-spacing: 1px;
     }
     .divider {
         border-bottom: 8px solid #222
