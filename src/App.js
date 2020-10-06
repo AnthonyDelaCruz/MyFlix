@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 
-import Jumbotron from "components/Jumbotron";
-import Footer from "components/Footer";
+import { Jumbotron, Footer } from "components";
+
 import { useFetchMoviedata } from "./hooks";
 
 function App() {
