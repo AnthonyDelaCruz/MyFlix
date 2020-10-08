@@ -47,6 +47,7 @@ export const Title = styled.h1`
   font-weight: bold;
   font-size: 2.5rem;
   @media (max-width: 1000px) {
+    font-size: 1.625rem;
     text-align: center;
   }
 `;
@@ -56,6 +57,7 @@ export const Subheader = styled.h2`
   font-size: 1.25rem;
   @media (max-width: 1000px) {
     text-align: center;
+    font-size: 1.125rem;
   }
 `;
 

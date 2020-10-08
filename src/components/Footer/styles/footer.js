@@ -28,7 +28,8 @@ export const Column = styled.div`
 `;
 export const Row = styled.div`
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-gap: 1.5rem;
 `;
 export const Break = styled.div`
   margin: 10px;

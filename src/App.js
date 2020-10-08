@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 
-import { Jumbotron, Footer } from "components";
+import { Jumbotron, Footer, Accordion } from "components";
 
 import { useFetchMoviedata } from "./hooks";
 
@@ -12,6 +12,7 @@ function App() {
   return (
     <div className="App">
       <Jumbotron />
+      <Accordion />
       <Footer />
     </div>
   );
