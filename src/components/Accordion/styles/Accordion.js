@@ -3,6 +3,7 @@ import styled from "styled-components/macro";
 export const Container = styled.div`
   margin: auto;
   padding: 70px 45px;
+  border-bottom: 8px solid #222;
   h1 {
     font-size: 3.125rem;
     text-align: center;
