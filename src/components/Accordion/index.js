@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Accordion from "./Accordion";
+import MembershipForm from "components/MembershipForm";
 import faqs from "static/fixtures/faq.json";
 import { FaTimes, FaPlus } from "react-icons/fa";
 
@@ -36,6 +37,7 @@ const AccordionMain = () => {
           );
         })}
       </Accordion.List>
+      <MembershipForm />
     </Accordion>
   );
 };

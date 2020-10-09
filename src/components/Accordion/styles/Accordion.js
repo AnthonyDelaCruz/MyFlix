@@ -16,7 +16,7 @@ export const Container = styled.div`
   }
 `;
 export const List = styled.div`
-  margin: 2em auto;
+  margin: 2em auto 5em;
   width: 75%;
   @media (max-width: 1000px) {
     width: 100%;
