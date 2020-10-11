@@ -1,6 +1,7 @@
-import React, { useEffect } from "react";
+import React from "react";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
-import { Jumbotron, Footer, Accordion } from "components";
+import { HomePage, SignInPage, SignupPage, ErrorPage } from "pages";
 
 import { useFetchMoviedata } from "./hooks";
 
@@ -11,9 +12,14 @@ function App() {
 
   return (
     <div className="App">
-      <Jumbotron />
-      <Accordion />
-      <Footer />
+      <Router>
+        <Switch>
+          <Route path="/" exact component={HomePage} />
+          <Route path="/signup" component={SignupPage} />
+          <Route path="/signin" component={SignInPage} />
+          <Route component={ErrorPage} />
+        </Switch>
+      </Router>
     </div>
   );
 }
