@@ -1,9 +1,10 @@
 import React from "react";
-import { Jumbotron, Footer, Accordion } from "components";
+import { Jumbotron, Footer, Accordion, HomeHero } from "components";
 
 const HomePage = () => {
   return (
     <div>
+      <HomeHero />
       <Jumbotron />
       <Accordion />
       <Footer />
