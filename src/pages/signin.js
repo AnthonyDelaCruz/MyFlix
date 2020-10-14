@@ -1,9 +1,14 @@
 import React from "react";
+import { HeroContainer, HomeNav, Footer } from "components";
 
 export default function SignIn() {
   return (
-    <div>
-      <h1>Signin</h1>
-    </div>
+    <>
+      <HeroContainer style={{ minHeight: "100vh" }}>
+        <HomeNav />
+        <h1>Signin</h1>
+      </HeroContainer>
+      <Footer />
+    </>
   );
 }

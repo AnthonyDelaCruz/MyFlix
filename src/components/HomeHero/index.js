@@ -1,9 +1,9 @@
 import React from "react";
 import Hero from "./HomeHero";
-import { MembershipForm, HomeNav } from "components";
+import { MembershipForm, HomeNav, HeroContainer } from "components";
 
 const HomeHero = () => (
-  <Hero>
+  <HeroContainer>
     <HomeNav />
     <Hero.Content>
       <Hero.Header>Unlimited movies, TV shows, and more.</Hero.Header>
@@ -11,7 +11,7 @@ const HomeHero = () => (
       <div className="spacer" />
       <MembershipForm />
     </Hero.Content>
-  </Hero>
+  </HeroContainer>
 );
 
 export default HomeHero;
