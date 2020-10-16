@@ -1,11 +1,12 @@
 import React from "react";
 import HomeHeader from "./HomeHeader";
 
-const HomeNav = () => {
+const HomeNav = ({ isSignInPage }) => {
   return (
     <HomeHeader>
-      <HomeHeader.Button icon src={"/images/logo.png"} alt="netflix logo" />
-      <HomeHeader.Button to="/signin">Sign In</HomeHeader.Button>
+      {!isSignInPage && (
+        <HomeHeader.Button to="/signin">Sign In</HomeHeader.Button>
+      )}
     </HomeHeader>
   );
 };

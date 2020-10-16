@@ -1,12 +1,16 @@
 import React from "react";
-import { HeroContainer, HomeNav, Footer } from "components";
+import { HeroContainer, HomeNav, Footer, SigninForm } from "components";
+import SignInForm from "components/SigninForm";
 
 export default function SignIn() {
   return (
     <>
-      <HeroContainer style={{ minHeight: "100vh" }}>
-        <HomeNav />
-        <h1>Signin</h1>
+      <HeroContainer isSignInPage>
+        <HomeNav isSignInPage />
+        <SigninForm>
+          <SignInForm.Text>Sign In</SignInForm.Text>
+          <SigninForm />
+        </SigninForm>
       </HeroContainer>
       <Footer />
     </>

@@ -33,6 +33,7 @@ export const Button = styled(Link)`
 export const Icon = styled.img`
   height: 36px;
   width: 134px;
+
   object-fit: contain;
   cursor: pointer;
   @media (max-width: 1000px) {

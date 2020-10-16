@@ -1,4 +1,4 @@
-import styled from "styled-components/macro";
+import styled, { css } from "styled-components/macro";
 
 export const Container = styled.div`
   background-image: url(/images/home-bg.jpg);
@@ -13,5 +13,10 @@ export const Container = styled.div`
     .spacer {
       padding: 0;
     }
+    ${({ isSignInPage }) =>
+      isSignInPage &&
+      css`
+        background-image: none;
+      `}
   }
 `;
