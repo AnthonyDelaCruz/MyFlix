@@ -39,6 +39,8 @@ export const Button = styled.button`
   font-size: 16px;
   font-weight: 400;
   margin: 25px 0;
+  outline: none;
+  cursor: pointer;
 `;
 export const Text = styled.h1`
   font-size: 32px;
