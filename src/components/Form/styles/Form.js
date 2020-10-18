@@ -51,8 +51,11 @@ export const TextFooter = styled.p`
   color: #737373;
   font-weight: 500;
   font-size: ${({ size }) => `${size}px`};
-
-  span {
+  svg {
+    margin-right: 5px;
+    color: #3b5998;
+  }
+  .signup-route {
     color: #fff;
   }
   a {

@@ -1,9 +1,14 @@
 import React from "react";
+import { HeroContainer, HomeNav, Footer, SignupForm } from "components";
 
-export default function Signup() {
+export default function SignIn() {
   return (
-    <div>
-      <h1>SIGNUP</h1>
-    </div>
+    <>
+      <HeroContainer formPage>
+        <HomeNav formPage />
+        <SignupForm />
+      </HeroContainer>
+      <Footer />
+    </>
   );
 }

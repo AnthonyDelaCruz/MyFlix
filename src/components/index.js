@@ -6,3 +6,5 @@ export { default as HomeHero } from "./HomeHero";
 export { default as HomeNav } from "./HomeHeader";
 export { default as HeroContainer } from "./Hero";
 export { default as SigninForm } from "./SigninForm";
+export { default as SignupForm } from "./SignupForm";
+export { default as AppForm } from "./Form";

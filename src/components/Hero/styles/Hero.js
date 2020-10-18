@@ -13,8 +13,8 @@ export const Container = styled.div`
     .spacer {
       padding: 0;
     }
-    ${({ isSignInPage }) =>
-      isSignInPage &&
+    ${({ formPage }) =>
+      formPage &&
       css`
         background-image: none;
       `}

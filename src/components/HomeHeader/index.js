@@ -1,12 +1,10 @@
 import React from "react";
 import HomeHeader from "./HomeHeader";
 
-const HomeNav = ({ isSignInPage }) => {
+const HomeNav = ({ formPage }) => {
   return (
     <HomeHeader>
-      {!isSignInPage && (
-        <HomeHeader.Button to="/signin">Sign In</HomeHeader.Button>
-      )}
+      {!formPage && <HomeHeader.Button to="/signin">Sign In</HomeHeader.Button>}
     </HomeHeader>
   );
 };

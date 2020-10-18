@@ -1,6 +1,7 @@
 import React, { createContext } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
+import ROUTES from "routes";
 import { HomePage, SignInPage, SignupPage, ErrorPage } from "pages";
 import { firebaseApp } from "./firebase";
 import { useFetchMoviedata } from "./hooks";
@@ -13,18 +14,18 @@ function App() {
   // );
 
   return (
-    <FirebaseContext.Provider value={{ firebase: firebaseApp }}>
-      <div className="App">
+    <div className="App">
+      <FirebaseContext.Provider value={{ firebase: firebaseApp }}>
         <Router>
           <Switch>
-            <Route path="/" exact component={HomePage} />
-            <Route path="/signup" component={SignupPage} />
-            <Route path="/signin" component={SignInPage} />
+            <Route path={ROUTES.HOME} exact component={HomePage} />
+            <Route path={ROUTES.SIGNUP} component={SignupPage} />
+            <Route path={ROUTES.SIGNIN} component={SignInPage} />
             <Route component={ErrorPage} />
           </Switch>
         </Router>
-      </div>
-    </FirebaseContext.Provider>
+      </FirebaseContext.Provider>
+    </div>
   );
 }
 
