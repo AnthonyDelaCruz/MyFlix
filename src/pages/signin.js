@@ -4,8 +4,8 @@ import { HeroContainer, HomeNav, Footer, SigninForm } from "components";
 export default function SignIn() {
   return (
     <>
-      <HeroContainer isSignInPage>
-        <HomeNav isSignInPage />
+      <HeroContainer formPage>
+        <HomeNav formPage />
         <SigninForm />
       </HeroContainer>
       <Footer />

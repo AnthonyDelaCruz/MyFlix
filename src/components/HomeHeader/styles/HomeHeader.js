@@ -9,6 +9,9 @@ export const Container = styled.div`
   max-width: 1920px;
   padding: 20px 2rem 0;
 
+  a:first-of-type {
+    flex: 1;
+  }
   @media (max-width: 1000px) {
     height: 45px;
   }
