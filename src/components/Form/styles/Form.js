@@ -29,7 +29,7 @@ export const Input = styled.input`
   border-radius: 4px;
   line-height: 50px;
 `;
-export const Button = styled.button`
+export const Button = styled.button.attrs((props) => ({ type: "submit" }))`
   min-height: 37px;
   background-color: ${({ disabled }) =>
     disabled ? "rgba(229, 9, 20, 0.5)" : "#e50914"};
@@ -68,8 +68,9 @@ export const TextFooter = styled.p`
   }
 `;
 
-export const FormErrorMessage = styled.div`
-  background-color: #e87c03;
+export const MessageNotif = styled.div`
+  background-color: ${({ type }) =>
+    type === "success" ? "#4BB543" : "#e87c03"};
   border-radius: 4px;
   padding: 10px 20px;
   margin-bottom: 1rem;

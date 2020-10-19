@@ -60,7 +60,9 @@ const SignInForm = () => {
     <AppForm>
       <AppForm.Form onSubmit={onSubmit}>
         <AppForm.Text>Sign In</AppForm.Text>
-        {error && <AppForm.ErrorMessage>{error}</AppForm.ErrorMessage>}
+        {error && (
+          <AppForm.MessageNotif type="error">{error}</AppForm.MessageNotif>
+        )}
         <AppForm.Input
           onChange={onChange}
           value={username}

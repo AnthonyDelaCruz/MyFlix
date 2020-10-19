@@ -6,7 +6,7 @@ import {
   Button,
   Text,
   TextFooter,
-  FormErrorMessage,
+  MessageNotif,
 } from "./styles/Form";
 
 export default function AppForm({ children, ...props }) {
@@ -25,6 +25,6 @@ AppForm.Text = ({ children, ...props }) => <Text {...props}>{children}</Text>;
 AppForm.TextFooter = ({ children, ...props }) => (
   <TextFooter {...props}>{children}</TextFooter>
 );
-AppForm.ErrorMessage = ({ children, ...props }) => (
-  <FormErrorMessage {...props}>{children}</FormErrorMessage>
+AppForm.MessageNotif = ({ children, ...props }) => (
+  <MessageNotif {...props}>{children}</MessageNotif>
 );
