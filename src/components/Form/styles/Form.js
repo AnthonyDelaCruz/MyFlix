@@ -31,7 +31,8 @@ export const Input = styled.input`
 `;
 export const Button = styled.button`
   min-height: 37px;
-  background-color: #e50914;
+  background-color: ${({ disabled }) =>
+    disabled ? "rgba(229, 9, 20, 0.5)" : "#e50914"};
   border: none;
   border-radius: 4px;
   color: #fff;
@@ -65,4 +66,12 @@ export const TextFooter = styled.p`
       text-decoration: underline;
     }
   }
+`;
+
+export const FormErrorMessage = styled.div`
+  background-color: #e87c03;
+  border-radius: 4px;
+  padding: 10px 20px;
+  margin-bottom: 1rem;
+  font-size: 14px;
 `;

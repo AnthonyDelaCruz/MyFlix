@@ -12,10 +12,30 @@ const SignInForm = () => {
     username: "",
     password: "",
   });
+  const [error, setError] = useState("");
+  const [loading, setLoading] = useState("");
   const { username, password } = credentials;
-  const onSubmit = (e) => {
+  const onSubmit = async (e) => {
     e.preventDefault();
-    console.log("submitting...", credentials);
+    setError("");
+    setLoading(true);
+    // console.log("submitting...", credentials);
+    try {
+      const result = await firebase
+        .auth()
+        .signInWithEmailAndPassword(username, password);
+      console.log("Result after logging in...", result);
+      if (result) {
+        setLoading(false);
+      }
+    } catch (error) {
+      console.log("Error when loggin in...", {
+        code: error.code,
+        msg: error.message,
+      });
+      setLoading(false);
+      setError(error.message);
+    }
   };
   const onChange = (e) => {
     const name = e.target.name;
@@ -40,6 +60,7 @@ const SignInForm = () => {
     <AppForm>
       <AppForm.Form onSubmit={onSubmit}>
         <AppForm.Text>Sign In</AppForm.Text>
+        {error && <AppForm.ErrorMessage>{error}</AppForm.ErrorMessage>}
         <AppForm.Input
           onChange={onChange}
           value={username}
@@ -53,7 +74,9 @@ const SignInForm = () => {
           placeholder="Password"
           type="password"
         />
-        <AppForm.Button>Sign In</AppForm.Button>
+        <AppForm.Button disabled={loading}>
+          {loading ? "Signing in..." : "Sign in"}
+        </AppForm.Button>
       </AppForm.Form>
       <div>
         <AppForm.TextFooter
